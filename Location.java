@@ -1,28 +1,31 @@
-package com.xworkz.things;
+package com.xworkz.person.things;
 
 public class Location {
-public String street;
-public String city;
-public String state;
-public int pinCode;
-public String country;
+	public int no;
+	public String street;
+	public City city;
+	public State state;
+	public Country country = new Country("India", "delhi", 1350023452, 30);
 
-public Location(String street, String city, String state, int pinCode, String country) {
-	super();
-	this.street = street;
-	this.city = city;
-	this.state = state;
-	this.pinCode = pinCode;
-	this.country = country;
-}
-public void display()
-{
-	System.out.println("location of mountain");
-	System.out.println("street name is -- "+this.street);
-	System.out.println("city name is -- "+this.city);
-	System.out.println("state name is -- "+this.state);
-	System.out.println("pinCode name is -- "+this.pinCode);
-	System.out.println("country name is -- "+this.country);
-}
+	
 
+	public Location(int no, String street, City city, State state, Country country) {
+		super();
+		this.no = no;
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.country = country;
+	}
+
+
+
+	public void showOff() {
+		System.out.println("printing the location details---------------------");
+		System.out.println("location no is    " + this.no);
+		System.out.println("street name is    " + this.street);
+		country.showOff();
+		state.showOff();
+		city.showOff();
+	}
 }
