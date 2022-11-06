@@ -1,26 +1,13 @@
-package com.xworkz.person.things;
+package com.xworkz.things;
 
-public class City {
+public class City extends Capital {
 
-	public String name;
-	public State state;
-	public int population;
-	public int pinCode;
-	 
-
-	public City(String name, State state, int population, int pinCode) {
-		super();
-		this.name = name;
-		this.state = state;
-		this.population = population;
-		this.pinCode = pinCode;
+	public City() {
+		System.out.println("enter city");
+		City city=new City();
+		Capital cap=new City();
+		Place place=new City();
+		Object object=new City();
 	}
 
-	public void showOff() {
-		System.out.println("printing the city details---------------------");
-		System.out.println("district name is   " + this.name);
-		System.out.println("district population is   " + this.population);
-		System.out.println("district pinCode is   " + this.pinCode);
-		state.showOff();
-	}
 }
